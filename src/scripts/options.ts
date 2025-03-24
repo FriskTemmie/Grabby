@@ -24,6 +24,8 @@ namespace Options
 
 		// ytdl
 		ytdlProxy: string = '';
+		embedMusicThumbnail: boolean = false;
+		embedVideoSubs: boolean = false;
 
 		// defatul dm
 		defaultDM: string = '';
@@ -265,10 +267,24 @@ namespace Options
 			header: 'YouTube-DL options',
 			type: 'textbox',
 			desc: 'Proxy address',
-			endsection: true,
 			getVal: () => {return this.opt.ytdlProxy},
 			setVal: (e) => {this.opt.ytdlProxy = e.value}
 		};
+
+		embedMusicThumbnail: CheckboxOption = {
+			type: 'checkbox',
+			desc: "Embed video thumbnail into downloaded music files",
+			getVal: () => {return this.opt.embedMusicThumbnail},
+			setVal: (e) => {this.opt.embedMusicThumbnail = e.checked},
+		}
+
+		embedVideoSubs: CheckboxOption = {
+			type: 'checkbox',
+			desc: "Embed video subtitles into the downloaded file",
+			endsection: true,
+			getVal: () => {return this.opt.embedVideoSubs},
+			setVal: (e) => {this.opt.embedVideoSubs = e.checked},
+		}
 
 		// default download manager
 		//------------------------------------------------------------------------

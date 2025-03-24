@@ -54,7 +54,10 @@ declare var fflate: any;
 //todo: show proper error if a download manager becomes unavailable when downloading (specially for socket-based ones)
 
 var GB = new Grabby();
-var nativeMinVer = '0.62.12';
+
+
+
+var nativeMinVer = '0.63.0';
 
 (async () => {
 

@@ -2,6 +2,7 @@
 *.code-workspace
 _extras/
 _installer/
+_stuff/
 /_Native Client/win/_installer/*.exe
 node_modules/
 dist/

@@ -128,8 +128,14 @@ namespace NativeMessaging
 	{
 		abstract type: string;
 		proxy?: string;
-		constructor(){
+		embedThumbnail?: boolean;
+		embedSubs?: boolean;
+
+		constructor()
+		{
 			if(Options.opt.ytdlProxy) this.proxy = Options.opt.ytdlProxy;
+			if(Options.opt.embedMusicThumbnail) this.embedThumbnail = true;
+			if(Options.opt.embedVideoSubs) this.embedSubs = true;
 		}
 	}
 
